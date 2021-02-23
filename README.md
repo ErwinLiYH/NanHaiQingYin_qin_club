@@ -1,7 +1,3 @@
-\<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"\>\</script\>
-
-\<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"\>\</script\>
-
 # 南海清音古琴社自动化选课后台程序规划
 
 问卷星制作问卷->导出为xlsx文件,作为原始数据(按序号导出)->数据清洗,计算班级频数(说明见3.3), 输出处理后的数据->排课->输出课表为json文件(方便后续处理,如后期建立图形界面)
@@ -28,7 +24,9 @@ J,K,L和M列为第四题(所选的曲目课程课程)的四个选项, 0代表没
 
 用于判断某曲目是否适合某人学习~~以及合适程度~~
 
-~~逻辑: 首先对所有曲目进行难度分级, 如1,2,3 ... ,数字越大代表越难,等级记为L. 然后将某人所学曲目中等级最高的曲目作为基数B. 合适程度~~$D=\begin{cases}0&if\;2>(L-B)\\L-B&if\;0<(L-B)\le2\\B-L+2&if\;(L-B)\le0\end{cases}$.
+~~逻辑: 首先对所有曲目进行难度分级, 如1,2,3 ... ,数字越大代表越难,等级记为L. 然后将某人所学曲目中等级最高的曲目作为基数B. 合适程度D:~~
+
+![](./statistics/img/mylatex20210224_004912.svg)
 
 ~~0 代表不适合, 除0外数字越小越适合.~~
 
