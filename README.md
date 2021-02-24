@@ -73,39 +73,70 @@ J,K,L和M列为第四题(所选的曲目课程课程)的四个选项, 0代表没
 
 程序结构设计
 
-### 5.1.class类
+### 5.1.class类(class.py)
 
 属性Property:
 
-1. 难度(name: difficulty , type: int)
-2. 学生(name: students, type: list)
-3. 最大学生数量(name: , type:)
+1. 课程名(name: name, type: str)
+2. 时间(name: time, type: str, example: Monday|14:00-15:00)
+3. 难度(name: difficulty , type: int)
+4. 学生(name: students, type: list)
+5. 当前学生数量(name: current_num, type: int)
+6. 最大学生数量(name: max_num: , type: int, -1 代表无限制)
 
 方法method:
 
-1. 
-2. 
+1. 添加学生(def add_student(student))
+2. 添加同修对(def add_pair(pair))
+3. 判断是否满员(def if_full(), return Boolean)
 
-### 5.2.pair类
+### 5.2.pair类(pair.py)
 
 属性Property:
 
-1. 
-2. 
+1. 第一人名字(name: name1, type: str)
+2. 第一人学号(name: id1, type: str)
+3. 第二人名字(name: name2, type: str)
+4. 第二人学号(name: id2, type: str)
+5. 候选课程(name: candidate_class, type: list)
+6. 填写时间(name: finish_time, type: str)
+7. 自由度(name: DF, type: int)
 
-方法method:
-
-1. 
-2. 
-
-### 5.3.student类
+### 5.3.student类(student.py)
 
 属性Property:
 
-1. 
-2. 
+1. 姓名(name: name, type: str)
+2. 学号(name: id, type: str)
+3. 候选课程(name: candidate_class, type: list)
+4. 填写时间(name: finish_time, type: str)
+5. 自由度(name: DF, type: int)
 
-方法method:
+### 5.4.arranger类(arranger.py)
 
-1. 
-2. 
+属性Property:
+
+1. file(name: xlsx_file_path, type: str)
+
+2. class_difficulty_list(name: txt_file_path, type: str)
+
+   example: 
+
+   file name: class_difficulty_list
+
+   ```
+
+   class1 2
+
+   class2 3
+
+   class3 4
+
+   ```
+
+method:
+
+1. 生成标准data frame: generate_DF(name_index, id_index, class_index, learned_index, pair_id_index, time_index)
+2. 计算班级频数: calculate_frequency()
+3. 开始排课: start
+
