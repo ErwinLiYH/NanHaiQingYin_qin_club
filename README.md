@@ -73,7 +73,7 @@ J,K,L和M列为第四题(所选的曲目课程课程)的四个选项, 0代表没
 
 程序结构设计
 
-### 5.1.class类(class.py)
+### 5.1.course类(course.py)
 
 属性Property:
 
@@ -81,8 +81,9 @@ J,K,L和M列为第四题(所选的曲目课程课程)的四个选项, 0代表没
 2. 时间(name: time, type: str, example: Monday|14:00-15:00)
 3. 难度(name: difficulty , type: int)
 4. 学生(name: students, type: list)
-5. 当前学生数量(name: current_num, type: int)
-6. 最大学生数量(name: max_num: , type: int, -1 代表无限制)
+5. 同修对(name: pairs, type: list)
+6. 当前学生数量(name: current_num, type: int)
+7. 最大学生数量(name: max_num: , type: int, -1 代表无限制)
 
 方法method:
 
