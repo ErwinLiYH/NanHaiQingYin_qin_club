@@ -1,4 +1,4 @@
-class course:
+class Course:
     def __init__(self,name,time,difficulty,max_num):
         self.name=name
         self.time=time

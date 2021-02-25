@@ -89,7 +89,7 @@ J,K,L和M列为第四题(所选的曲目课程课程)的四个选项, 0代表没
 
 1. 添加学生(def add_student(student))
 2. 添加同修对(def add_pair(pair))
-3. 判断是否满员(def if_full(), return Boolean)
+3. ~~判断是否满员(def if_full(), return Boolean)~~
 
 ### 5.2.pair类(pair.py)
 
