@@ -1,5 +1,5 @@
 class pair:
-    def __init__(name1,id1,name2,id2,candidate_class,finish_time):
+    def __init__(self,name1,id1,name2,id2,candidate_class,finish_time):
         self.name1=name1
         self.id1=id1
         self.name2=name2

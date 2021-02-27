@@ -1,5 +1,5 @@
 class student:
-    def __init__(name,id,canidate_class,finish_time):
+    def __init__(self,name,id,canidate_class,finish_time):
         self.name=name
         self.id=id
         self.canidate_class=canidate_class

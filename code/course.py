@@ -1,12 +1,12 @@
 class Course:
-    def __init__(self,name,time,difficulty,max_num):
+    def __init__(self,name,difficulty,max_num,frequency):
         self.name=name
-        self.time=time
         self.difficulty=difficulty
         self.students=[]
         self.pairs=[]
         self.current_num=0
         self.max_num=max_num
+        self.frequency=frequency
     def add_student(self,student):
         if self.current_num<self.max_num:
             self.students.append(student)
