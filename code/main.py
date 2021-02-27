@@ -28,6 +28,7 @@ def start(txt_path,xlsx_path,num_of_courses,columns_in_xlsx):
     pair_id2 = []
     pair_candidate_class = []
     pair_finish_time = []
+    
     # [2.1] get information from course_info.txt and generate course objects
     # format for course_info.txt:
     # course difficulty max_students_number(-1 means no limitation) frequency
@@ -39,4 +40,5 @@ def start(txt_path,xlsx_path,num_of_courses,columns_in_xlsx):
         lines = [i.rstrip('\n') for i in course_info.readlines()]
     for i in lines:
         courses.append(course.Course(i.split(' ')[0],int(i.split(' ')[1]),int(i.split(' ')[2]),int(i.split(' ')[3])))
-    
+
+    #[2.2] generate pair objects
