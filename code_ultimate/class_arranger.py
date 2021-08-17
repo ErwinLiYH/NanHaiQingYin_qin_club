@@ -19,6 +19,14 @@ def generate(xlsx_path, time_column, name_column, id_column, pairName_column, pa
     name_series = pd.read_excel(xlsx_path, engine='openpyxl', 
     usecols=name_column, squeeze=True)
 
+    # check duplicate
+    flag = name_series.duplicated()
+    if flag.any() == True:
+        du = ''
+        for i in name_series.loc[flag]:
+            du+=(i+' ')
+        raise Exception("Exists duplicate name, %s"%du)
+
     id_series = pd.read_excel(xlsx_path, engine='openpyxl', 
     usecols=id_column, squeeze=True)
     
@@ -195,14 +203,3 @@ def to_txt(classes):
         for j in i.pairs:
             str+=('%s\t%s\n'%(j.name1,j.name2))
     return str
-
-# check name, name must be unique
-students, pairs, classes = generate("../statistics/data/test0.xlsx", "B", "G", "I", "Q", "R", "K:P")
-
-# with open('data2.p', 'wb') as f:
-#     pickle.dump({'student':students,'pair':pairs,"class":classes},f)
-
-x = arrange(students, pairs, classes)
-
-with open('result.txt', 'w') as f:
-    f.write(to_txt(x[2]))
