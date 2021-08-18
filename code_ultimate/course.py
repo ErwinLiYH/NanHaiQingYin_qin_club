@@ -1,7 +1,6 @@
 class Course:
     def __init__(self,name,max_num,frequency):
         self.name=name
-        #self.difficulty=difficulty
         self.students=[]
         self.pairs=[]
         self.current_num=0

@@ -192,7 +192,7 @@ def arrange(students, pairs, classes):
         index = find_object(classes,final_class,'name')
         classes[index[0]].add_student(i)
 
-    return students, pairs, classes
+    return classes
 
 def to_txt(classes):
     str = ""

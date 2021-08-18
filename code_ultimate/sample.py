@@ -6,4 +6,4 @@ students, pairs, classes = generate("../statistics/data/test0.xlsx", "B", "G", "
 x = arrange(students, pairs, classes)
 
 with open('result.txt', 'w') as f:
-    f.write(to_txt(x[2]))
+    f.write(to_txt(x))
