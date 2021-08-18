@@ -10,7 +10,7 @@ Candidate courses should satisfy the students capacity, I use number of songs le
 
 The sample questionnaire:
 
-![qrcode](C:\Users\Kylis\Desktop\NanHaiQingYin_qin_club\statistics\img\qrcode.jpg)
+![qrcode](.\statistics\img\qrcode.jpg)
 
 ## Usage
 
