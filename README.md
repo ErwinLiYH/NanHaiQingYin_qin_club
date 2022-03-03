@@ -2,6 +2,19 @@
 
 automatically arrange course base on the questionnaire
 
+## Environment
+
+```python
+pip install pandas numpy openpyxl
+```
+
+or
+
+```python
+conda create -n evn_name python=3.8.10(or other version) pandas numpy openpyxl
+conda activate evn_name
+```
+
 ## Questionnaire format
 
 Questionnaire must contain name, ID, candidate courses, pair name and pair id.
